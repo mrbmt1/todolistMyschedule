@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="10dp"
+    android:paddingRight="20dp"
+    android:weightSum="3"
+    tools:context=".Fragment.ProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Họ và tên"
+            android:padding="5dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:text="Email"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:textStyle="bold"
+            android:text="Số điện thoại"
+            android:padding="5dp"
+
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:paddingTop="5dp"
+            android:text="Tài khoản"
+            android:padding="5dp"
+
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewUserName"
+            android:padding="5dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textViewUserEmail"
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textViewPhone"
+            android:layout_width="match_parent"
+            android:padding="5dp"
+
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textViewAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:paddingTop="5dp"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

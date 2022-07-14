@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:clipToPadding="false"
+        android:isScrollContainer="false"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/todayContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/teal_200"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true"
+                    app:contentPadding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_marginBottom="0dp"
+                        android:text="Hôm nay"
+                        android:textColor="#FFFFFF"
+                        android:textSize="27sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+                <MySche22.com.NoScrollListView
+                    android:id="@+id/taskListToday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="#30CCCCCC"
+                    android:dividerHeight="1dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/tomorrowContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/teal_200"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true"
+                    app:contentPadding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_marginBottom="0dp"
+                        android:text="Ngày mai"
+                        android:textColor="#FFFFFF"
+                        android:textSize="27sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+
+                <MySche22.com.NoScrollListView
+                    android:id="@+id/taskListTomorrow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="#30CCCCCC"
+                    android:dividerHeight="1dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/otherContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/teal_200"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true"
+                    app:contentPadding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_marginBottom="0dp"
+                        android:text="Những ngày sau"
+                        android:textColor="#FFFFFF"
+                        android:textSize="27sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+
+                <MySche22.com.NoScrollListView
+                    android:id="@+id/taskListUpcoming"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="#30CCCCCC"
+                    android:dividerHeight="1dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="30dp"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/emptyTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WOW"
+            android:textColor="#EC5D5D"
+            android:textSize="38dp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bạn không có việc phải làm cho hôm nay"
+            android:textColor="#323872"
+            android:textSize="34dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Hôm nay không có lịch làm việc"
+            android:textColor="#CDD1D5"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnopenAddModifyTask"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/radius_border_button"
+            android:paddingHorizontal="70dp"
+            android:paddingVertical="15dp"
+            android:text="Thêm lịch" />
+
+    </LinearLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnfab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:tint="@android:color/white"
+        android:layout_margin="40dp"
+        android:contentDescription="Add Task"
+        android:onClick="openAddModifyTask"
+        android:src="@drawable/ic_baseline_add_10" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
